@@ -23,11 +23,7 @@
 
 % Set up the fonts according to options
 \def\mainfontsize{11pt}
-\def\mainfontface{Times New Roman}
-
-\DeclareOption{calibri}{%
-  \def\mainfontface{Calibri}
-}
+\def\mainfontface{Calibri}
 
 \ProcessOptions\relax
 
@@ -158,8 +154,8 @@ Ligatures={TeX, NoCommon, NoDiscretionary}]{\mainfontface}
 \makeatletter
 \newcommand\makeheader{
 	\begin{center}
-		\begin{tabu} to 1\textwidth { X[l,m] X[2,c,m] X[r,m] }
-			\printaddress & \printname & \printcontacts \\
+		\begin{tabu} to 1\textwidth { X[2,l,m] X[1,r,m] }
+			\printname & \printcontacts \\
 		\end{tabu}	
 	\end{center}
 	\vspace*{\afterheaderspace}
