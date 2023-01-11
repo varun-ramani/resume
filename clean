@@ -1,1 +1,1 @@
-rm *.aux *.log *latexmk *fls *.xdv *.out *synctex* *.pdf
+rm *.aux *.log *latexmk *fls *.xdv *.out *synctex* *.pdf .Rhistory
