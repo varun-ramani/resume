@@ -1,6 +1,13 @@
 # Resume
 This is the source code for my resume, using a template sourced from CareerCup.
 
+## Instructions for Arch
+### TeXLive Setup
+- Install TeXLive by running `yay -S texlive`
+- Proceed to install Calibri with `yay -S ttf-ms-win10-auto`
+### Compilation
+
+
 ## Compilation
 - To set up LaTeX on macOS, run `brew install --cask basictex` to obtain a basic LaTeX environment.
 - Once `tlmgr` is available, run `sudo tlmgr install texliveonfly` to install software that 
