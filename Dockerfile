@@ -1,0 +1,1 @@
+FROM miktex/miktex

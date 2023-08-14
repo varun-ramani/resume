@@ -1,0 +1,235 @@
+%-------------------------
+% Resume in Latex
+% Author : Jake Gutierrez
+% Based off of: https://github.com/sb2nov/resume
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+
+
+%----------FONT OPTIONS----------
+% sans-serif
+% \usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage[default]{sourcesanspro}
+
+% serif
+% \usepackage{CormorantGaramond}
+% \usepackage{charter}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+\usepackage{calc} % added
+\newcommand{\resumeSubSubheadingLeft}[2]{% % added
+\begin{description}[leftmargin=!,labelwidth=\widthof{\small\bfseries #1}]
+    \item[\small #1]{\textit{\small  #2}}
+\end{description}
+}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HEADING----------
+% \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+%   \textbf{\href{http://sourabhbajaj.com/}{\Large Sourabh Bajaj}} & Email : \href{mailto:sourabh@sourabhbajaj.com}{sourabh@sourabhbajaj.com}\\
+%   \href{http://sourabhbajaj.com/}{http://www.sourabhbajaj.com} & Mobile : +1-123-456-7890 \\
+% \end{tabular*}
+
+\begin{center}
+    \textbf{\Huge \scshape Varun Ramani} \\ \vspace{1pt}
+    \small \href{tel:7326725930}{\underline{732-672-5930}} $|$ \href{mailto:varun.ramani@gmail.com}{\underline{varun.ramani@gmail.com}} $|$ 
+    \href{https://linkedin.com/in/varun-ramani}{\underline{linkedin.com/in/varun-ramani}} $|$
+    \href{https://github.com/varun-ramani}{\underline{github.com/varun-ramani}} $|$
+    \href{https://varunramani.com}{\underline{varunramani.com}}
+\end{center}
+
+
+%-----------EDUCATION-----------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {University of Maryland}{College Park, MD}
+      {B.S. Computer Science, Minor in Mathematics. GPA 3.9/4.0.}{Aug. 2020 -- May 2024}
+      \resumeSubSubheadingLeft
+        {Relevant Coursework}{Data Structures/Algorithms, Machine Learning, Networks, Cryptography \\ Multivariate Calculus, Linear Algebra, Statistics, Abstract Algebra, Compilers}
+  \resumeSubHeadingListEnd
+
+%
+%-----------PROGRAMMING SKILLS-----------
+\section{Technical Skills}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Languages}{: Python, Java, JavaScript, C/C++, Go, OCaml, Ruby, SQL, MATLAB} \\
+     \textbf{Frameworks}{: Flask, React, React Native, Flutter, Keras} \\
+     \textbf{Tooling and Systems}{: Git, AWS, Google Cloud Platform, Heroku, Docker, Linux} \\
+     \textbf{Libraries}{: pandas, NumPy, Matplotlib}
+    }}
+ \end{itemize}
+
+
+%-----------EXPERIENCE-----------
+\section{Experience}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+    {Student Trainee}{Jun. 2023 -- Aug. 2023}
+    {Naval Research Laboratory}{Washington, D.C.}
+      \resumeItemListStart
+        \resumeItem{Designing and developing modernized tooling for RADAR applications.}
+        \resumeItem{Collaborate directly with internal clientele to translate requirements into intuitive and performant technology.}
+      \resumeItemListEnd
+    \resumeSubheading
+      {Software Engineering Intern}{May 2022 -- Aug. 2022}
+      {Meta Platforms}{Menlo Park, CA}
+      \resumeItemListStart
+        \resumeItem{Completed and deployed improved identity matching system to Facebook's products.}
+        \resumeItem{Created new experiment framework to assess effects of new system in identity matching backend.}
+        \resumeItem{Applied Hack, Python, and Meta's internal tooling.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Teaching Assistant (Data Science / Intro to Computer Systems)}{Aug. 2022 -- Jun. 2023}
+      {University of Maryland}{College Park, MD}
+      \resumeItemListStart
+        \resumeItem{Mentored groups of up to 40 students in systems/UNIX-related concepts.}
+        \resumeItem{Clarified concepts pertaining to statistics and machine learning.}
+        \resumeItem{Graded projects and exams.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Undergraduate Research Assistant}{Aug. 2020 -- Dec. 2021}
+      {The First-Year Innovation \& Research Experience @ University of Maryland}{College Park, MD}
+      \resumeItemListStart
+        \resumeItem{Collaboratively implemented machine learning model backed by UNet architecture to perform semantic segmentation on LIDAR data.}
+        \resumeItem{Presented at undergraduate research summit.}
+      \resumeItemListEnd
+
+% -----------Multiple Positions Heading-----------
+%    \resumeSubSubheading
+%     {Software Engineer I}{Oct 2014 - Sep 2016}
+%     \resumeItemListStart
+%        \resumeItem{Apache Beam}
+%          {Apache Beam is a unified model for defining both batch and streaming data-parallel processing pipelines}
+%     \resumeItemListEnd
+%    \resumeSubHeadingListEnd
+%-------------------------------------------
+  \resumeSubHeadingListEnd
+
+
+%-----------PROJECTS-----------
+\section{Projects}
+    \resumeSubHeadingListStart
+      \resumeProjectHeading
+          {\textbf{Memaid} $|$ \emph{Computer Vision, Speech To Text, NLP}}{Apr. 2022}
+          \resumeItemListStart
+            \resumeItem{Dementia aid. When someone introduces themselves to user, app memorizes face after \textit{only seeing it once} and associates with name. Listens to subsequent conversation and stores highlights.}
+            \resumeItem{On future interactions with this person, app automatically recognizes face and relays name / previous highlights to user through connected earbuds.}
+            \resumeItem{Won best hack for social good + best use of Google Cloud against 91 competing teams.}
+          \resumeItemListEnd
+      \resumeProjectHeading
+          {\textbf{Maskif.ai} $|$ \emph{Computer Vision, IoT, Flask Framework}}{Nov. 2020}
+          \resumeItemListStart
+            \resumeItem{Enforces pandemic mask compliance. Applies computer vision to intelligently trigger WiFi-enabled lock when unmasked individual approaches business's door; automatically unlocks after individual leaves.}
+            \resumeItem{Highly cost effective. Leverages Google Assistant SDK to support wide variety of smart locks; fault-tolerant algorithm accurate even with lower-quality cameras.}
+            \resumeItem{Beat 42 competing teams for first place at Yale's YHack 2020 hackathon.}
+          \resumeItemListEnd
+      \resumeProjectHeading
+          {\textbf{Intellicity} $|$ \emph{Computer Vision, MongoDB, Flutter, Flask}}{Sep. 2019}
+          \resumeItemListStart
+            \resumeItem{Advanced mobile map application. Applies crowdsourced information and vision to add rich, granular details to Google Maps; includes precise geolocation data for trash bins, bathrooms, safety hazards, and parking spots.}
+            \resumeItem{Helps people navigate unfamiliar places with confidence; instantly finding what they need.}
+            \resumeItem{Ranked top 30 among 242 competing teams.}
+          \resumeItemListEnd
+    \resumeSubHeadingListEnd
+
+
+
+
+
+
+
+
+%-------------------------------------------
+\end{document}
