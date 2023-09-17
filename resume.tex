@@ -1,192 +1,264 @@
-% The font could be set to Windows-specific Calibri by using the 'calibri' option
-\documentclass[]{mcdowellcv}
+%-------------------------
+% Resume in Latex
+% Author : Jake Gutierrez
+% Based off of: https://github.com/sb2nov/resume
+% License : MIT
+%------------------------
 
-% For mathematical symbols
-\usepackage{amsmath}
-\usepackage[fixed]{fontawesome5}
+\documentclass[letterpaper,10pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
 \usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
 
-% Set applicant's personal data for header
-\name{Varun Ramani}
-\contacts{
-	(732) 672-5930 % \faIcon{phone} 
-	\linebreak
-	varun.ramani@gmail.com % \faIcon{envelope} 
-	\linebreak
-	https://varunramani.com % \faIcon{globe}
-	\linebreak
-	https://github.com/varun-ramani % \faIcon{github} 
-	\linebreak
-	https://linkedin.com/in/varun-ramani % \faIcon{linkedin} 
+
+%----------FONT OPTIONS----------
+% sans-serif
+% \usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage[default]{sourcesanspro}
+
+% serif
+% \usepackage{CormorantGaramond}
+% \usepackage{charter}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
 }
 
-\newcommand{\EducationSection}{
-\begin{cvsection}{Education}
-	\vspace{0.2em}
-	\begin{cvsubsection}{College Park, MD}{University of Maryland}{August 2020 -- May 2025}
-		\vspace{0.1em}
-		\begin{itemize}
-			\item \textbf{Program of Study}{: B.S. in Computer Science, M.S in Computer Science}
-			\item \textbf{Current Undergraduate GPA}{: 3.875 / 4.0}
-			\item \textbf{Relevant Upper-Level Computer Science Courses}{: Algorithms, Machine Learning, Cryptography, Compilers,
-			      Computer Networks, Data Structures, Operating Systems, Data
-			      Science, Wireless Sensing}
-			\item \textbf{Relevant Upper-Level Math Courses}{: Abstract Algebra,
-			      Linear Algebra, Calculus, Number Theory, Statistics}
-		\end{itemize}
-	\end{cvsubsection}
-\end{cvsection}
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
 }
 
-\newcommand{\WorkExperienceSection}{
-	\begin{cvsection}{Experience}
-		\vspace{0.2em}
-		\begin{cvsubsection}{U.S. Naval Research Laboratory}{Software Engineering Intern}{May 2023 -- August 2023}
-			\vspace{0.1em}
-			\begin{itemize}
-				\item Independently proposed and modernized C\# Windows Forms
-					  application to web technologies
-				\item Led redesign using React, Mantine, and TypeScript for enhanced user interactions
-				\item Engineered new HTTP-based communication protocol to
-					  replace TCP-powered system, using Wireshark for analysis
-					  of existing protocol
-				\item Designed and deployed Rust-based server for seamless
-				      protocol translation
-				\item Implemented robust mTLS-based user authentication using
-					  Department of Defense's Common Access Cards (CAC)
-				\item Collaborated on C\# application extension, mastering C++
-					  backend and C\# frontend
-				\item Developed Docker/Python-powered build systems for web app,
-					  Rust server, and C++ program, simplifying RPM package creation
-				\item Created user-friendly deployment utility using Tauri,
-					  ensuring seamless software installation for non-technical users
-			\end{itemize}
-		\end{cvsubsection}
-		\begin{cvsubsection}{University of Maryland}{Teaching Assistant (Intro Systems)}{Jan 2023 -- May 2023}
-			\vspace{0.1em}
-			\begin{itemize}
-				\item Led discussion sections with up to 40 students, fostering
-					  engaging learning environments.
-				\item Graded hundreds of exams and worksheets meticulously,
-					  offering prompt and constructive feedback.
-				\item Mentored numerous students during office hours, clarifying
-					  intricate concepts related to C, assembly, and operating
-					  systems internals.
-				\item Achieved high exam averages in the section, indicative of
-					  effective teaching methodologies.
-			\end{itemize}
-		\end{cvsubsection}
-		\begin{cvsubsection}{Meta}{Software Engineering Intern}{May 2022 -- August 2022}
-			\vspace{0.1em}
-			\begin{itemize}
-				\item Enhanced user privacy by transitioning user identifiers to
-				      hashed device IDs via contributions to Hack codebase.
-				\item Conducted experiments to evaluate impact of privacy
-					  changes on identity matching backend. Built Python
-					  experimentation framework for streamlined deployment of similar
-					  trials by other developers.
-			\end{itemize}
-		\end{cvsubsection}
-		\begin{cvsubsection}{University of Maryland}{Teaching Assistant (Data Science)}{Sep 2022 -- Dec 2022}
-			\vspace{0.1em}
-			\begin{itemize}
-				\item Graded a substantial volume of projects and exams,
-	   				  maintaining accuracy and consistency.
-				\item Assisted students during office hours, aiding
-					  comprehension of course material related to machine
-					  learning and data analysis.
-			\end{itemize}
-		\end{cvsubsection}
-		\begin{cvsubsection}{FIRE @ University of Maryland}{Undergraduate Research Assistant}{August 2020 -- December 2021}
-			\vspace{0.1em}
-			\begin{itemize}
-				\item Developed UNet-based ML model for LIDAR data semantic
-					  segmentation, achieving dense point classification within
-					  point clouds.
-				\item Demonstrated project outcomes at an undergraduate research
-					  summit, showcasing successful contributions to LIDAR data
-					  analysis.
-			\end{itemize}
-		\end{cvsubsection}
-		% \begin{cvsubsection}{Code Ninjas Princeton}{Teacher}{March 2019 -- December 2019}
-		% 	\begin{itemize}
-		% 		\item Taught students aged 7--14 programming fundamentals through
-		% 			  game development courses.
-		% 		\item Designed and led multi-day workshop on building NLP chatbots
-		% 		      powered by Python/IBM Watson.
-		% 		\item Supervised, mentored, and guided groups of up to 25 students at a time as they 
-		% 		      built their software.
-		% 	\end{itemize}
-		% \end{cvsubsection}
-	\end{cvsection}
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
 }
 
-\newcommand{\SkillsSection}{
-	\begin{cvsection}{Technical Skills}
-		\vspace{0.2em}
-		\begin{cvsubsection}{}{}{}
-			\textbf{Languages}{: Rust, Python, Java, JavaScript, C/C++, Go, OCaml, Ruby, SQL, MATLAB} \\
-			\textbf{Frameworks}{: Flask, React, React Native, Flutter, Keras} \\
-			\textbf{Tooling and Systems}{: Git, AWS, Google Cloud Platform, Heroku, Docker, Linux} \\
-			\textbf{Libraries}{: pandas, NumPy, Matplotlib}
-		\end{cvsubsection}
-	\end{cvsection}
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
 }
 
-\newcommand{\ProjectsSection}{
-	\begin{cvsection}{Projects and Awards}
-		\vspace{0.2em}
-		\begin{cvsubsection}{Memaid}{Best Social Good Hack / 91 teams}{\href{https://github.com/varun-ramani/memaid}{gh:varun-ramani/memaid}}
-			\vspace{0.1em}
-			\begin{itemize}
-				\item Integrated computer vision, speech to text, and NLP into a
-					  dementia aid.
-				\item When someone introduces themselves to the user, the
-				      application memorizes their face \emph{after only seeing
-				      it once} and associates it with their name. Furthermore,
-				      it listens to any subsequent conversation and stores
-				      relevant highlights. 
-				\item The next time the user meets this person, the application
-				      will automatically recognize them and relay their name /
-				      last conversation highlights to the user through any
-				      connected headphones or earbuds.
-			\end{itemize}
-		\end{cvsubsection}
-		\begin{cvsubsection}{Maskif.ai}{First Place / 42 teams, YHack 2020}{\href{https://github.com/varun-ramani/maskifai-server}{gh:varun-ramani/maskifai-server}}
-			\vspace{0.1em}
-			\begin{itemize}
-				\item Accessible computer vision-powered IoT product.
-				\item Product helps businesses deal with anti-maskers during
-				      pandemic by intelligently triggering connected smart lock
-				      when unmasked individual approaches door; automatically
-				      unlocks door after they leave.
-				\item Applied Python, Tensorflow, Flask, and Google Assistant
-					  SDK. 
-			\end{itemize}
-		\end{cvsubsection}
-        % \begin{cvsubsection}{Intellicity}{Top 30 / 242 teams, PennApps 2019}{\href{https://github.com/varun-ramani/intellicity}{gh:varun-ramani/intellicity}}
-		% 	\begin{itemize}
-		% 		\item Uses crowdsourced information and computer vision to add
-		% 			  rich, granular details to Google Maps; includes but is not
-		% 			  limited to precise geolocation data for trash bins,
-		% 			  bathrooms, safety hazards, and parking spots. Helps people
-		% 			  navigate unfamiliar places with absolute confidence,
-		% 			  instantly finding anything they need. 
-		% 		\item Applied Dart/Flutter, Python 3, MongoDB, and Flask.
-		% 	\end{itemize}
-		% \end{cvsubsection}
-	\end{cvsection}
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+\usepackage{calc} % added
+\newcommand{\resumeSubSubheadingLeft}[2]{% % added
+\begin{description}[leftmargin=!,labelwidth=\widthof{\small\bfseries #1}]
+    \item[\small #1]{\textit{\small  #2}}
+\end{description}
 }
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 
 \begin{document}
 
-	% Print the header
-	\makeheader
-	
-	% Print the content
-	\WorkExperienceSection
-	\ProjectsSection
-	\EducationSection
-	\SkillsSection
+%----------HEADING----------
+% \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+%   \textbf{\href{http://sourabhbajaj.com/}{\Large Sourabh Bajaj}} & Email : \href{mailto:sourabh@sourabhbajaj.com}{sourabh@sourabhbajaj.com}\\
+%   \href{http://sourabhbajaj.com/}{http://www.sourabhbajaj.com} & Mobile : +1-123-456-7890 \\
+% \end{tabular*}
 
+\begin{center}
+    \textbf{\Huge \scshape Varun Ramani} \\ \vspace{1pt}
+    \small \href{tel:7326725930}{\underline{732-672-5930}} $|$ \href{mailto:varun.ramani@gmail.com}{\underline{varun.ramani@gmail.com}} $|$ 
+    \href{https://linkedin.com/in/varun-ramani}{\underline{linkedin.com/in/varun-ramani}} $|$
+    \href{https://github.com/varun-ramani}{\underline{github.com/varun-ramani}} $|$
+    \href{https://varunramani.com}{\underline{varunramani.com}}
+\end{center}
+
+
+%-----------EDUCATION-----------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {University of Maryland}{College Park, MD}
+      {B.S./M.S. Computer Science, Minor in Mathematics. GPA 3.9/4.0.}{Aug. 2020 -- Dec 2024}
+        \textit{\small{\item{
+          \textbf{Computer Science Coursework}{: Operating Systems, Networks, Compilers, Cryptography, Machine Learning, Data Science, Algorithms/Data Structures} \\
+          \textbf{Math Coursework: }{Abstract Algebra, Linear Algebra, Signal Processing, Number Theory, Cryptography}
+        }}}
+  \resumeSubHeadingListEnd
+
+%
+%-----------PROGRAMMING SKILLS-----------
+\section{Technical Skills}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Languages}{: Rust, Python, Java, JavaScript, C/C++, Go, OCaml, Ruby, SQL, MATLAB} \\
+     \textbf{Frameworks}{: Flask, React, React Native, Flutter, TensorFlow, PyTorch} \\
+     \textbf{Tooling and Systems}{: Git, AWS, GCP, Docker, Linux} \\
+     \textbf{Libraries}{: pandas, NumPy, Matplotlib}
+    }}
+ \end{itemize}
+
+
+%-----------EXPERIENCE-----------
+\section{Experience}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+    {Student Trainee}{Jun. 2023 -- Aug. 2023}
+    {Naval Research Laboratory}{Washington, D.C.}
+      \resumeItemListStart
+        \resumeItem{Revolutionized user experience in critical RADAR application;
+        users reported 98\% faster load times and 100\% of users found rewrite
+        more intuitive to use. Proposed and executed modernization using
+        TypeScript, React, and Mantine.}
+
+        \resumeItem{Hardened application with military-grade security; ensured
+        denial of access to malicious actors. Leveraged Department of Defense
+        cryptographic infrastructure to authenticate users against their DoD
+        common access card (CAC).}
+
+        \resumeItem{Renovated team's development pipeline; architectural
+        advancements slashed prod build times by 25\% and dev build times by
+        99.96\%. Created Docker/Python-powered build/deployment utility to
+        replace manual RPM build/deploy workflow.}
+
+        \resumeItem{Optimized communication between app/backend for
+        easier inspection by developers; yielded 20\% shorter
+        message bodies. Analyzed legacy TCP-based protocol with Wireshark;
+        removed redundancies and redesigned atop HTTP + standard JSON.}
+
+        \resumeItem{Avoided time/labor-intensive modification to incumbent C++
+        backend; created $\sim$1000 LoC compatibility layer for new protocol.
+        Implemented reverse proxy/server running alongside backend; leveraged
+        Rust to minimize performance overhead.}
+
+        \resumeItem{Ensured seamless software installation for nontechnical end
+        users; reduced manual intervention necessary by 92\% in software
+        installation process. Developed automatic and modern deployment system
+        using Tauri (Rust/React).}
+      \resumeItemListEnd
+    \resumeSubheading
+      {Software Engineering Intern}{May 2022 -- Aug. 2022}
+      {Meta Platforms}{Menlo Park, CA}
+      \resumeItemListStart
+        \resumeItem{Completed and deployed improved identity matching system to Facebook's products.}
+        \resumeItem{Created new experiment framework to assess effects of new system in identity matching backend.}
+        \resumeItem{Applied Hack, Python, and Meta's internal tooling.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Teaching Assistant (Data Science / Intro to Computer Systems)}{Aug. 2022 -- Jun. 2023}
+      {University of Maryland}{College Park, MD}
+      \resumeItemListStart
+        \resumeItem{Mentored groups of up to 40 students in systems/UNIX-related concepts.}
+        \resumeItem{Clarified concepts pertaining to statistics and machine learning.}
+        \resumeItem{Graded projects and exams.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Undergraduate Research Assistant}{Aug. 2020 -- Dec. 2021}
+      {The First-Year Innovation \& Research Experience @ University of Maryland}{College Park, MD}
+      \resumeItemListStart
+        \resumeItem{Collaboratively implemented machine learning model backed by UNet architecture to perform semantic segmentation on LIDAR data.}
+        \resumeItem{Presented at undergraduate research summit.}
+      \resumeItemListEnd
+
+% -----------Multiple Positions Heading-----------
+%    \resumeSubSubheading
+%     {Software Engineer I}{Oct 2014 - Sep 2016}
+%     \resumeItemListStart
+%        \resumeItem{Apache Beam}
+%          {Apache Beam is a unified model for defining both batch and streaming data-parallel processing pipelines}
+%     \resumeItemListEnd
+%    \resumeSubHeadingListEnd
+%-------------------------------------------
+  \resumeSubHeadingListEnd
+
+
+%-----------PROJECTS-----------
+\section{Projects}
+    \resumeSubHeadingListStart
+      \resumeProjectHeading
+          {\textbf{Memaid} $|$ \emph{Computer Vision, Speech To Text, NLP}}{Apr. 2022}
+          \resumeItemListStart
+            \resumeItem{Dementia aid. When someone introduces themselves to user, app memorizes face after \textit{only seeing it once} and associates with name. Listens to subsequent conversation and stores highlights.}
+            \resumeItem{On future interactions with this person, app automatically recognizes face and relays name / previous highlights to user through connected earbuds.}
+            \resumeItem{Won best hack for social good + best use of Google Cloud against 91 competing teams.}
+          \resumeItemListEnd
+      \resumeProjectHeading
+          {\textbf{Maskif.ai} $|$ \emph{Computer Vision, IoT, Flask Framework}}{Nov. 2020}
+          \resumeItemListStart
+            \resumeItem{Enforces pandemic mask compliance. Applies computer vision to intelligently trigger WiFi-enabled lock when unmasked individual approaches business's door; automatically unlocks after individual leaves.}
+            \resumeItem{Highly cost effective. Leverages Google Assistant SDK to support wide variety of smart locks; fault-tolerant algorithm accurate even with lower-quality cameras.}
+            \resumeItem{Beat 42 competing teams for first place at Yale's YHack 2020 hackathon.}
+          \resumeItemListEnd
+      \resumeProjectHeading
+          {\textbf{Intellicity} $|$ \emph{Computer Vision, MongoDB, Flutter, Flask}}{Sep. 2019}
+          \resumeItemListStart
+            \resumeItem{Advanced mobile map application. Applies crowdsourced information and vision to add rich, granular details to Google Maps; includes precise geolocation data for trash bins, bathrooms, safety hazards, and parking spots.}
+            \resumeItem{Helps people navigate unfamiliar places with confidence; instantly finding what they need.}
+            \resumeItem{Ranked top 30 among 242 competing teams.}
+          \resumeItemListEnd
+    \resumeSubHeadingListEnd
+
+
+
+
+
+
+
+
+%-------------------------------------------
 \end{document}
