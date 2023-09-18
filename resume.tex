@@ -26,7 +26,7 @@
 % \usepackage[sfdefault]{FiraSans}
 % \usepackage[sfdefault]{roboto}
 % \usepackage[sfdefault]{noto-sans}
-% \usepackage[default]{sourcesanspro}
+\usepackage[default]{sourcesanspro}
 
 % serif
 % \usepackage{CormorantGaramond}
@@ -134,85 +134,106 @@
       {University of Maryland}{College Park, MD}
       {B.S./M.S. Computer Science, Minor in Mathematics. GPA 3.9/4.0.}{Aug. 2020 -- Dec 2024}
         \textit{\small{\item{
-          \textbf{Computer Science Coursework}{: Operating Systems, Networks, Compilers, Cryptography, Machine Learning, Data Science, Algorithms/Data Structures} \\
-          \textbf{Math Coursework: }{Abstract Algebra, Linear Algebra, Signal Processing, Number Theory, Cryptography}
+          \textbf{Computer Science Coursework}{: Operating Systems, Networks, Compilers, Machine Learning, Data Science, Algorithms/Data Structures} \\
+          \textbf{Math Coursework: }{Signal Processing, Cryptography, Abstract Algebra, Linear Algebra, Statistics, Calculus}
         }}}
   \resumeSubHeadingListEnd
 
 %
-%-----------PROGRAMMING SKILLS-----------
-\section{Technical Skills}
- \begin{itemize}[leftmargin=0.15in, label={}]
-    \small{\item{
-     \textbf{Languages}{: Rust, Python, Java, JavaScript, C/C++, Go, OCaml, Ruby, SQL, MATLAB} \\
-     \textbf{Frameworks}{: Flask, React, React Native, Flutter, TensorFlow, PyTorch} \\
-     \textbf{Tooling and Systems}{: Git, AWS, GCP, Docker, Linux} \\
-     \textbf{Libraries}{: pandas, NumPy, Matplotlib}
-    }}
- \end{itemize}
+
 
 
 %-----------EXPERIENCE-----------
 \section{Experience}
   \resumeSubHeadingListStart
     \resumeSubheading
-    {Student Trainee}{Jun. 2023 -- Aug. 2023}
+    {Software Engineering Intern}{Jun. 2023 -- Aug. 2023}
     {Naval Research Laboratory}{Washington, D.C.}
       \resumeItemListStart
+
         \resumeItem{Revolutionized user experience in critical RADAR application;
         users reported 98\% faster load times and 100\% of users found rewrite
         more intuitive to use. Proposed and executed modernization using
         TypeScript, React, and Mantine.}
 
-        \resumeItem{Hardened application with military-grade security; ensured
+        \resumeItem{Hardened application with military-grade security; implemented
         denial of access to malicious actors. Leveraged Department of Defense
         cryptographic infrastructure to authenticate users against their DoD
         common access card (CAC).}
 
-        \resumeItem{Renovated team's development pipeline; architectural
-        advancements slashed prod build times by 25\% and dev build times by
+        \resumeItem{Renovated team's development pipeline; improved
+        architecture to reduce prod build times by 25\% and dev build times by
         99.96\%. Created Docker/Python-powered build/deployment utility to
         replace manual RPM build/deploy workflow.}
 
-        \resumeItem{Optimized communication between app/backend for
-        easier inspection by developers; yielded 20\% shorter
-        message bodies. Analyzed legacy TCP-based protocol with Wireshark;
-        removed redundancies and redesigned atop HTTP + standard JSON.}
+        \resumeItem{Achieved improved code maintability and 20\% faster
+        performance by optimizing app/backend communication contract. Analyzed
+        legacy TCP-based protocol with Wireshark; removed redundancies and
+        redesigned atop HTTP + standard JSON.}
 
-        \resumeItem{Avoided time/labor-intensive modification to incumbent C++
-        backend; created $\sim$1000 LoC compatibility layer for new protocol.
-        Implemented reverse proxy/server running alongside backend; leveraged
-        Rust to minimize performance overhead.}
+        \resumeItem{Enabled developer productivity while developing against
+        incumbent C++ backend by creating $\sim$1000 LoC compatibility layer for
+        new protocol. Implemented reverse proxy/server running alongside
+        backend; leveraged Rust to minimize performance overhead.}
 
         \resumeItem{Ensured seamless software installation for nontechnical end
-        users; reduced manual intervention necessary by 92\% in software
-        installation process. Developed automatic and modern deployment system
-        using Tauri (Rust/React).}
+        users; increased automation by 92\% in software installation process.
+        Developed automatic and modern deployment system using Tauri
+        (Rust/React).}
       \resumeItemListEnd
     \resumeSubheading
       {Software Engineering Intern}{May 2022 -- Aug. 2022}
-      {Meta Platforms}{Menlo Park, CA}
+      {Meta}{Menlo Park, CA}
       \resumeItemListStart
-        \resumeItem{Completed and deployed improved identity matching system to Facebook's products.}
-        \resumeItem{Created new experiment framework to assess effects of new system in identity matching backend.}
-        \resumeItem{Applied Hack, Python, and Meta's internal tooling.}
+
+        \resumeItem{Enhanced Facebook user privacy while preserving robust ad
+        recommendations; showcased concrete achievements using internal
+        simulations. Used Hack, Meta's internal language, to implement
+        industry-standard hashing techniques.}
+
+        \resumeItem{Optimized efficiency of core module in advertising backend;
+        realized lower CPU usage and billions of saved operations as proven in weeklong runtime analysis.
+        Mathematically proved redundancy of expensive cryptographic step before
+        eliminating it.}
+
+        \resumeItem{Enabled rapid development iteration on critical module by
+        developing bespoke simulation framework; published documentation and
+        training resources. Leveraged internal Python dialect as liason between
+        new system and more generalized simulation tooling.}
+
       \resumeItemListEnd
 
     \resumeSubheading
-      {Teaching Assistant (Data Science / Intro to Computer Systems)}{Aug. 2022 -- Jun. 2023}
+      {Teaching Assistant (Data Science / Intro to Computer Systems)}{Aug. 2022 -- Present}
       {University of Maryland}{College Park, MD}
       \resumeItemListStart
-        \resumeItem{Mentored groups of up to 40 students in systems/UNIX-related concepts.}
-        \resumeItem{Clarified concepts pertaining to statistics and machine learning.}
-        \resumeItem{Graded projects and exams.}
+
+				\resumeItem{Led discussion sections with up to 40 students, fostering
+        engaging learning environments.}
+
+				\resumeItem{Graded hundreds of exams and worksheets meticulously,
+				offering prompt and constructive feedback.}
+
+				\resumeItem{Mentored numerous students during office hours, clarifying
+				intricate concepts related to C, assembly, and operating systems
+				internals.}
+
+				\resumeItem{Achieved high exam averages in the section, indicative of
+				effective teaching methodologies.}
+
       \resumeItemListEnd
 
     \resumeSubheading
       {Undergraduate Research Assistant}{Aug. 2020 -- Dec. 2021}
       {The First-Year Innovation \& Research Experience @ University of Maryland}{College Park, MD}
       \resumeItemListStart
-        \resumeItem{Collaboratively implemented machine learning model backed by UNet architecture to perform semantic segmentation on LIDAR data.}
-        \resumeItem{Presented at undergraduate research summit.}
+
+				\resumeItem{Developed UNet-based ML model for LIDAR data semantic
+				segmentation, achieving dense point classification within point clouds.}
+
+				\resumeItem{Demonstrated project outcomes at an undergraduate research
+				summit, showcasing successful contributions to LIDAR data analysis.}
+
       \resumeItemListEnd
 
 % -----------Multiple Positions Heading-----------
@@ -244,13 +265,6 @@
             \resumeItem{Highly cost effective. Leverages Google Assistant SDK to support wide variety of smart locks; fault-tolerant algorithm accurate even with lower-quality cameras.}
             \resumeItem{Beat 42 competing teams for first place at Yale's YHack 2020 hackathon.}
           \resumeItemListEnd
-      \resumeProjectHeading
-          {\textbf{Intellicity} $|$ \emph{Computer Vision, MongoDB, Flutter, Flask}}{Sep. 2019}
-          \resumeItemListStart
-            \resumeItem{Advanced mobile map application. Applies crowdsourced information and vision to add rich, granular details to Google Maps; includes precise geolocation data for trash bins, bathrooms, safety hazards, and parking spots.}
-            \resumeItem{Helps people navigate unfamiliar places with confidence; instantly finding what they need.}
-            \resumeItem{Ranked top 30 among 242 competing teams.}
-          \resumeItemListEnd
     \resumeSubHeadingListEnd
 
 
@@ -260,5 +274,14 @@
 
 
 
-%-------------------------------------------
+%-----------PROGRAMMING SKILLS-----------
+\section{Technical Skills}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Languages}{: Rust, Python, Java, JavaScript, C/C++, Go, OCaml, Ruby, SQL, MATLAB} \\
+     \textbf{Frameworks}{: Flask, React, React Native, Flutter, TensorFlow, PyTorch} \\
+     \textbf{Tooling and Systems}{: Git, AWS, GCP, Docker, Linux} \\
+     \textbf{Libraries}{: pandas, NumPy, Matplotlib}
+    }}
+ \end{itemize}
 \end{document}
