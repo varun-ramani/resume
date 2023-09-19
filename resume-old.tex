@@ -1,0 +1,192 @@
+% The font could be set to Windows-specific Calibri by using the 'calibri' option
+\documentclass[]{mcdowellcv}
+
+% For mathematical symbols
+\usepackage{amsmath}
+\usepackage[fixed]{fontawesome5}
+\usepackage[hidelinks]{hyperref}
+
+% Set applicant's personal data for header
+\name{Varun Ramani}
+\contacts{
+	(732) 672-5930 % \faIcon{phone} 
+	\linebreak
+	varun.ramani@gmail.com % \faIcon{envelope} 
+	\linebreak
+	https://varunramani.com % \faIcon{globe}
+	\linebreak
+	https://github.com/varun-ramani % \faIcon{github} 
+	\linebreak
+	https://linkedin.com/in/varun-ramani % \faIcon{linkedin} 
+}
+
+\newcommand{\EducationSection}{
+\begin{cvsection}{Education}
+	\vspace{0.2em}
+	\begin{cvsubsection}{College Park, MD}{University of Maryland}{August 2020 -- May 2025}
+		\vspace{0.1em}
+		\begin{itemize}
+			\item \textbf{Program of Study}{: B.S. in Computer Science, M.S in Computer Science}
+			\item \textbf{Current Undergraduate GPA}{: 3.875 / 4.0}
+			\item \textbf{Relevant Upper-Level Computer Science Courses}{: Algorithms, Machine Learning, Cryptography, Compilers,
+			      Computer Networks, Data Structures, Operating Systems, Data
+			      Science, Wireless Sensing}
+			\item \textbf{Relevant Upper-Level Math Courses}{: Abstract Algebra,
+			      Linear Algebra, Calculus, Number Theory, Statistics}
+		\end{itemize}
+	\end{cvsubsection}
+\end{cvsection}
+}
+
+\newcommand{\WorkExperienceSection}{
+	\begin{cvsection}{Experience}
+		\vspace{0.2em}
+		\begin{cvsubsection}{U.S. Naval Research Laboratory}{Software Engineering Intern}{May 2023 -- August 2023}
+			\vspace{0.1em}
+			\begin{itemize}
+				\item Independently proposed and modernized C\# Windows Forms
+					  application to web technologies
+				\item Led redesign using React, Mantine, and TypeScript for enhanced user interactions
+				\item Engineered new HTTP-based communication protocol to
+					  replace TCP-powered system, using Wireshark for analysis
+					  of existing protocol
+				\item Designed and deployed Rust-based server for seamless
+				      protocol translation
+				\item Implemented robust mTLS-based user authentication using
+					  Department of Defense's Common Access Cards (CAC)
+				\item Collaborated on C\# application extension, mastering C++
+					  backend and C\# frontend
+				\item Developed Docker/Python-powered build systems for web app,
+					  Rust server, and C++ program, simplifying RPM package creation
+				\item Created user-friendly deployment utility using Tauri,
+					  ensuring seamless software installation for non-technical users
+			\end{itemize}
+		\end{cvsubsection}
+		\begin{cvsubsection}{University of Maryland}{Teaching Assistant (Intro Systems)}{Jan 2023 -- May 2023}
+			\vspace{0.1em}
+			\begin{itemize}
+				\item Led discussion sections with up to 40 students, fostering
+					  engaging learning environments.
+				\item Graded hundreds of exams and worksheets meticulously,
+					  offering prompt and constructive feedback.
+				\item Mentored numerous students during office hours, clarifying
+					  intricate concepts related to C, assembly, and operating
+					  systems internals.
+				\item Achieved high exam averages in the section, indicative of
+					  effective teaching methodologies.
+			\end{itemize}
+		\end{cvsubsection}
+		\begin{cvsubsection}{Meta}{Software Engineering Intern}{May 2022 -- August 2022}
+			\vspace{0.1em}
+			\begin{itemize}
+				\item Enhanced user privacy by transitioning user identifiers to
+				      hashed device IDs via contributions to Hack codebase.
+				\item Conducted experiments to evaluate impact of privacy
+					  changes on identity matching backend. Built Python
+					  experimentation framework for streamlined deployment of similar
+					  trials by other developers.
+			\end{itemize}
+		\end{cvsubsection}
+		\begin{cvsubsection}{University of Maryland}{Teaching Assistant (Data Science)}{Sep 2022 -- Dec 2022}
+			\vspace{0.1em}
+			\begin{itemize}
+				\item Graded a substantial volume of projects and exams,
+	   				  maintaining accuracy and consistency.
+				\item Assisted students during office hours, aiding
+					  comprehension of course material related to machine
+					  learning and data analysis.
+			\end{itemize}
+		\end{cvsubsection}
+		\begin{cvsubsection}{FIRE @ University of Maryland}{Undergraduate Research Assistant}{August 2020 -- December 2021}
+			\vspace{0.1em}
+			\begin{itemize}
+				\item Developed UNet-based ML model for LIDAR data semantic
+					  segmentation, achieving dense point classification within
+					  point clouds.
+				\item Demonstrated project outcomes at an undergraduate research
+					  summit, showcasing successful contributions to LIDAR data
+					  analysis.
+			\end{itemize}
+		\end{cvsubsection}
+		% \begin{cvsubsection}{Code Ninjas Princeton}{Teacher}{March 2019 -- December 2019}
+		% 	\begin{itemize}
+		% 		\item Taught students aged 7--14 programming fundamentals through
+		% 			  game development courses.
+		% 		\item Designed and led multi-day workshop on building NLP chatbots
+		% 		      powered by Python/IBM Watson.
+		% 		\item Supervised, mentored, and guided groups of up to 25 students at a time as they 
+		% 		      built their software.
+		% 	\end{itemize}
+		% \end{cvsubsection}
+	\end{cvsection}
+}
+
+\newcommand{\SkillsSection}{
+	\begin{cvsection}{Technical Skills}
+		\vspace{0.2em}
+		\begin{cvsubsection}{}{}{}
+			\textbf{Languages}{: Rust, Python, Java, JavaScript, C/C++, Go, OCaml, Ruby, SQL, MATLAB} \\
+			\textbf{Frameworks}{: Flask, React, React Native, Flutter, Keras} \\
+			\textbf{Tooling and Systems}{: Git, AWS, Google Cloud Platform, Heroku, Docker, Linux} \\
+			\textbf{Libraries}{: pandas, NumPy, Matplotlib}
+		\end{cvsubsection}
+	\end{cvsection}
+}
+
+\newcommand{\ProjectsSection}{
+	\begin{cvsection}{Projects and Awards}
+		\vspace{0.2em}
+		\begin{cvsubsection}{Memaid}{Best Social Good Hack / 91 teams}{\href{https://github.com/varun-ramani/memaid}{gh:varun-ramani/memaid}}
+			\vspace{0.1em}
+			\begin{itemize}
+				\item Integrated computer vision, speech to text, and NLP into a
+					  dementia aid.
+				\item When someone introduces themselves to the user, the
+				      application memorizes their face \emph{after only seeing
+				      it once} and associates it with their name. Furthermore,
+				      it listens to any subsequent conversation and stores
+				      relevant highlights. 
+				\item The next time the user meets this person, the application
+				      will automatically recognize them and relay their name /
+				      last conversation highlights to the user through any
+				      connected headphones or earbuds.
+			\end{itemize}
+		\end{cvsubsection}
+		\begin{cvsubsection}{Maskif.ai}{First Place / 42 teams, YHack 2020}{\href{https://github.com/varun-ramani/maskifai-server}{gh:varun-ramani/maskifai-server}}
+			\vspace{0.1em}
+			\begin{itemize}
+				\item Accessible computer vision-powered IoT product.
+				\item Product helps businesses deal with anti-maskers during
+				      pandemic by intelligently triggering connected smart lock
+				      when unmasked individual approaches door; automatically
+				      unlocks door after they leave.
+				\item Applied Python, Tensorflow, Flask, and Google Assistant
+					  SDK. 
+			\end{itemize}
+		\end{cvsubsection}
+        % \begin{cvsubsection}{Intellicity}{Top 30 / 242 teams, PennApps 2019}{\href{https://github.com/varun-ramani/intellicity}{gh:varun-ramani/intellicity}}
+		% 	\begin{itemize}
+		% 		\item Uses crowdsourced information and computer vision to add
+		% 			  rich, granular details to Google Maps; includes but is not
+		% 			  limited to precise geolocation data for trash bins,
+		% 			  bathrooms, safety hazards, and parking spots. Helps people
+		% 			  navigate unfamiliar places with absolute confidence,
+		% 			  instantly finding anything they need. 
+		% 		\item Applied Dart/Flutter, Python 3, MongoDB, and Flask.
+		% 	\end{itemize}
+		% \end{cvsubsection}
+	\end{cvsection}
+}
+
+\begin{document}
+
+	% Print the header
+	\makeheader
+	
+	% Print the content
+	\WorkExperienceSection
+	\ProjectsSection
+	\EducationSection
+	\SkillsSection
+
+\end{document}

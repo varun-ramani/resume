@@ -43,7 +43,7 @@
 \addtolength{\oddsidemargin}{-0.5in}
 \addtolength{\evensidemargin}{-0.5in}
 \addtolength{\textwidth}{1in}
-\addtolength{\topmargin}{-.5in}
+\addtolength{\topmargin}{-0.5in}
 \addtolength{\textheight}{1.0in}
 
 \urlstyle{same}
@@ -86,7 +86,7 @@
 \newcommand{\resumeProjectHeading}[2]{
     \item
     \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
-      \small#1 & #2 \\
+      #1 & #2 \\
     \end{tabular*}\vspace{-7pt}
 }
 
@@ -211,15 +211,9 @@
 				\resumeItem{Led discussion sections with up to 40 students, fostering
         engaging learning environments.}
 
-				\resumeItem{Graded hundreds of exams and worksheets meticulously,
-				offering prompt and constructive feedback.}
-
 				\resumeItem{Mentored numerous students during office hours, clarifying
 				intricate concepts related to C, assembly, and operating systems
 				internals.}
-
-				\resumeItem{Achieved high exam averages in the section, indicative of
-				effective teaching methodologies.}
 
       \resumeItemListEnd
 
@@ -251,19 +245,53 @@
 %-----------PROJECTS-----------
 \section{Projects}
     \resumeSubHeadingListStart
+      % \resumeProjectHeading
+      %     {\textbf{OccupanSee} $|$ \underline{\href{https://devpost.com/software/occupan-see}{devpost:occupan-see}} $|$ \emph{Computer Vision}}{Apr. 2023}
+      %     \resumeItemListStart
+
+      %       \resumeItem{Improved fire safety in large gatherings by automating
+      %       overcrowding detection; awarded "Most Philanthropic Hack" by
+      %       Bloomberg at UMD's Bitcamp 2023 hackathon.}
+
+      %       \resumeItem{Applied Facebook Detectron2 model to quickly/accurately
+      %       count people in webcam feed, then streamed real-time video to React
+      %       app.}
+
+      %     \resumeItemListEnd
+
       \resumeProjectHeading
-          {\textbf{Memaid} $|$ \emph{Computer Vision, Speech To Text, NLP}}{Apr. 2022}
+          {\textbf{Memaid} $|$ \underline{\href{https://devpost.com/software/memaid}{devpost:memaid}} $|$ \emph{Computer Vision, Speech To Text, NLP, Google Cloud}}{Apr. 2022}
           \resumeItemListStart
-            \resumeItem{Dementia aid. When someone introduces themselves to user, app memorizes face after \textit{only seeing it once} and associates with name. Listens to subsequent conversation and stores highlights.}
-            \resumeItem{On future interactions with this person, app automatically recognizes face and relays name / previous highlights to user through connected earbuds.}
-            \resumeItem{Won best hack for social good + best use of Google Cloud against 91 competing teams.}
+
+            \resumeItem{Improved quality of life for dementia patients; received
+            recognition by Google at Bitcamp 2022 hackathon for best use of
+            Google Cloud technology and best contributions to social good among
+            91 other Bitcamp 2022 projects.}
+
+            \resumeItem{When someone introduces themselves to user, app applies
+            CV/NLP to memorize face after \textit{only seeing it once} and
+            associates with name. Listens to subsequent conversation and stores
+            highlights. On future interactions, app recognizes face and relays
+            name / previous conversation highlights to user through connected earbuds.}
+
           \resumeItemListEnd
       \resumeProjectHeading
-          {\textbf{Maskif.ai} $|$ \emph{Computer Vision, IoT, Flask Framework}}{Nov. 2020}
+          {\textbf{Maskif.ai} $|$ \underline{\href{https://devpost.com/software/maskif-ai}{devpost:maskif-ai}} $|$ \emph{Computer Vision, IoT, TensorFlow}}{Nov. 2020}
           \resumeItemListStart
-            \resumeItem{Enforces pandemic mask compliance. Applies computer vision to intelligently trigger WiFi-enabled lock when unmasked individual approaches business's door; automatically unlocks after individual leaves.}
-            \resumeItem{Highly cost effective. Leverages Google Assistant SDK to support wide variety of smart locks; fault-tolerant algorithm accurate even with lower-quality cameras.}
-            \resumeItem{Beat 42 competing teams for first place at Yale's YHack 2020 hackathon.}
+
+            \resumeItem{Developed accessible solution enforcing pandemic mask
+            compliance; ranked first among 42 teams at Yale's
+            YHack 2020 hackathon.}
+
+            \resumeItem{Computer vision intelligently triggers "smart" lock when
+            unmasked individual approaches door; unlocks after individual's
+            departure.}
+
+            \resumeItem{Highly cost effective. Leverages Google Assistant SDK to
+            support wide variety of smart locks; fault-tolerant algorithm
+            accurate even with lower-quality cameras; efficient TensorFlow
+            neural network performs well on standard consumer hardware.}
+
           \resumeItemListEnd
     \resumeSubHeadingListEnd
 
